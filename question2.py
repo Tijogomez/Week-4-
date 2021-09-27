@@ -75,7 +75,7 @@ while True:
 query2 = "SELECT Doctor_Name,Hospital_Name FROM Hospital,Doctor WHERE Hospital.Hospital_ID=Doctor.Hospital_ID and Hospital.Hospital_ID=?"
 cur1.execute(query2, (hospital_id,))
 print(
-    "List of Doctors along with their Hospital Name\n")
+    "List of Doctors and their Hospital Name\n")
 for item in cur1.fetchall():
     print("{}\t{}".format(item[0], item[1]))
 
